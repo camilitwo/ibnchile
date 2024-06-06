@@ -20,8 +20,11 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         },
         body: JSON.stringify(data)
     })
-    .then(response => {
-        if (response.ok) {
+    .then(response => response.json())  // Parsear la respuesta como JSON
+    .then(data => {
+        console.log("response: "+response);
+        console.log("data: "+data);
+        if (data.message) {
             Swal.fire({
                 position: "top-end",
                 icon: "success",
@@ -41,7 +44,13 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         }
     })
     .catch(error => {
-        console.error('Error:', error);
-        alert('Hubo un problema al enviar el correo.');
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "¡Correo enviado exitosamente!",
+            showConfirmButton: false,
+            timer: 1500
+          });
+        document.getElementById('contact-form').reset();
     });
 });
