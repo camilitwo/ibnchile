@@ -1,0 +1,51 @@
+
+.new-section {
+    padding: 40px 20px;
+    background-color: gainsboro;
+    margin: 20px 0;
+    text-align: center;
+    
+}
+.new-section h2, .new-section h3 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    max-width: 50%;
+}
+.new-section p {
+    font-size: 1.3em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-width: 50%;
+}
+
+.new-section ul {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 3px;
+    list-style-type: disc; /* Marker for list items */
+    text-align: left; /* Align text to the left */
+    display: inline-block; /* Center the list */
+    margin: 0 auto; /* Center the list */
+    padding: 0; /* Remove default padding */
+}
+.new-section ul li {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.new-section ul, .new-section h2, .new-section p, .new-section h3 {
+    /*centrar texto*/
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    max-width: 42%;
+}
+
+hr.separator {
+    border: 0;
+    height: 1px;
+    background-color: black;
+    margin: 40px auto; /* Center the separator */
+    width: 43%;
+}
