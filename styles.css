@@ -18,48 +18,6 @@
     padding: 20px;
     justify-content: center;
 }
-
-.container-taller .card:nth-child(4),
-.container-taller .card:nth-child(5) {
-    grid-column: span 1; /* Ocupa una columna cada tarjeta en la segunda fila */
-}
-
-@media screen and (max-width: 900px) {
-    .container-taller {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas más pequeñas */
-    }
-    .container-taller .card {
-        grid-column: span 1; /* Todas las tarjetas ocupan una columna */
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .container-taller {
-        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
-    }
-    .container-taller .card {
-        grid-column: span 1; /* Todas las tarjetas ocupan una columna */
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .container-taller {
-        grid-template-columns: repeat(2, 1fr); /* Two columns in smaller screens */
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .card {
-        width: 45%; /* Ajusta el ancho de las tarjetas en pantallas más pequeñas */
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .card {
-        width: 100%; /* Una columna en pantallas muy pequeñas */
-    }
-}
-
 .card {
     background-color: #2a50df;
     border-radius: 8px;
