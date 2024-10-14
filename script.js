@@ -112,3 +112,30 @@ function enviarMail(){
     });
 }
 
+
+let slideIndex = 0;
+const slides = document.querySelector('.carrusel-slides');
+const totalSlides = slides.children.length;
+
+function showSlide(index) {
+    if (index >= totalSlides) {
+        slideIndex = 0;
+    } else if (index < 0) {
+        slideIndex = totalSlides - 1;
+    } else {
+        slideIndex = index;
+    }
+
+    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
+function moveSlides(n) {
+    showSlide(slideIndex + n);
+}
+
+// Para cambiar automáticamente cada 5 segundos
+setInterval(() => {
+    moveSlides(1);
+}, 5000);
+
+
