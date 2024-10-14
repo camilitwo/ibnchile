@@ -170,27 +170,63 @@
 
 .carrusel-container {
     position: relative;
+    width: 100%; /* Asegura que el carrusel ocupe el 100% del ancho disponible */
     max-width: 100%;
     margin: auto;
     overflow: hidden;
+    height: 700px; /* Ajusta la altura según sea necesario */
 }
 
 .carrusel-slides {
     display: flex;
-    transition: transform 0.7s ease-in-out;
-    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Asegura que las imágenes ocupen el espacio correcto */
 }
 
 .slide {
-    min-width: 100%;
-    box-sizing: border-box;
+    min-width: 100%; /* Cada imagen ocupa el 100% del ancho del contenedor */
+    height: 100%; /* Mantén la altura uniforme */
+    position: relative; /* Para posicionar el texto dentro de la imagen */
 }
 
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     display: block;
+    height: auto;
+    object-fit: contain; /* Mantiene la proporción de la imagen y la renderiza completa */
+    object-position: center; 
+}
+
+.slide-text {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.slide-text h2 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #FFDD00; /* Color amarillo del texto */
+    white-space: nowrap; /* Evita saltos de línea en el título */
+    overflow: hidden; /* Oculta cualquier texto que se salga del contenedor */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es demasiado largo */
+    background-color: #041f3e;
+}
+
+.slide-text p {
+    padding: 10px;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+    color: #041f3e; /* Texto blanco para el párrafo */
 }
 
 .prev, .next {
@@ -222,32 +258,4 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.slide-text {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 100%;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.slide-text h2 {
-    font-size: 60px;
-    background-color: #041f3e; /* Fondo semitransparente azul oscuro */
-    font-weight: bold;
-    color: #FFDD00; /* Color amarillo del texto */
-    white-space: nowrap;
-}
-
-.slide-text p {
-    padding: 10px;
-    font-size: 26px;
-    font-style: italic;
-    font-weight: bold;
-    color: #041f3e; /* Texto blanco para el párrafo */
-}
 
