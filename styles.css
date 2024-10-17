@@ -304,9 +304,10 @@
 /* Estilo para las imágenes en 3 columnas */
 .cursos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+    grid-template-columns: repeat(2, 1fr); /* 3 columnas por fila */
     gap: 20px; /* Espacio entre imágenes */
 }
+
 
 .curso {
     background-color: white;
@@ -317,7 +318,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250px; /* Altura fija para el contenedor de la imagen */
+    height: 350px; /* Altura fija para el contenedor de la imagen */
 }
 
 .curso img {
@@ -328,6 +329,11 @@
     max-width: 100%;
     max-height: 100%;
 }
+
+
+
+
+
 
 
 
