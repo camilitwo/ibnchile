@@ -314,27 +314,19 @@
     border-radius: 8px;
     text-align: center;
     transition: transform 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px; /* Altura fija para el contenedor de la imagen */
 }
 
 .curso img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
     border-radius: 8px;
-    max-width: 600px;
-    max-height: 600px;
-}
-
-.curso img:hover {
-    top: 50%;
-    left: 50%;
-    transform: scale(1.2); /* Centra y escala la imagen */
-    z-index: 1000; /* Coloca la imagen por encima de otros elementos */
-    width: auto; /* Deja que la imagen crezca */
-    height: auto;
-    max-width: 90%;
-    max-height: 90%;
-    transition: transform 0.7s ease-in-out; /* Suaviza la transición */
-    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 
